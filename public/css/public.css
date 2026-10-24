@@ -1,0 +1,474 @@
+/**
+ * WPCalibrate Bangladesh Order Tracker - Public Styles
+ * Modern, responsive, accessible, RTL-friendly.
+ */
+
+:root {
+	--wpcalibrate-primary: #1062fe;
+	--wpcalibrate-primary-hover: #004ecc;
+	--wpcalibrate-text: #161616;
+	--wpcalibrate-text-secondary: #525252;
+	--wpcalibrate-border: #e0e0e0;
+	--wpcalibrate-bg-card: #ffffff;
+	--wpcalibrate-bg-subtle: #f4f4f4;
+	--wpcalibrate-success: #198038;
+	--wpcalibrate-warning: #b28600;
+	--wpcalibrate-error: #da1e28;
+	--wpcalibrate-radius: 8px;
+}
+
+.wpcalibrate-tracker-container {
+	margin: 24px 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: var(--wpcalibrate-text);
+	box-sizing: border-box;
+}
+
+.wpcalibrate-tracker-container *,
+.wpcalibrate-tracker-container *::before,
+.wpcalibrate-tracker-container *::after {
+	box-sizing: inherit;
+}
+
+/* Cards */
+.wpcalibrate-track-card,
+.wpcalibrate-result-card {
+	background: var(--wpcalibrate-bg-card);
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: var(--wpcalibrate-radius);
+	padding: 24px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+	margin-bottom: 24px;
+}
+
+.wpcalibrate-card-header {
+	margin-bottom: 20px;
+}
+
+.wpcalibrate-form-title {
+	margin: 0 0 6px;
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--wpcalibrate-text);
+}
+
+.wpcalibrate-form-desc {
+	margin: 0;
+	color: var(--wpcalibrate-text-secondary);
+	font-size: 14px;
+}
+
+/* Form Controls */
+.wpcalibrate-field-group {
+	margin-bottom: 16px;
+}
+
+.wpcalibrate-label {
+	display: block;
+	font-size: 13px;
+	font-weight: 600;
+	margin-bottom: 6px;
+	color: var(--wpcalibrate-text);
+}
+
+.wpcalibrate-required {
+	color: var(--wpcalibrate-error);
+	margin-inline-start: 2px;
+}
+
+.wpcalibrate-input {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 15px;
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: 6px;
+	background: #ffffff;
+	color: var(--wpcalibrate-text);
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wpcalibrate-input:focus {
+	outline: none;
+	border-color: var(--wpcalibrate-primary);
+	box-shadow: 0 0 0 3px rgba(16, 98, 254, 0.2);
+}
+
+.wpcalibrate-hint {
+	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+.wpcalibrate-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 12px 24px;
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color 0.2s, transform 0.1s;
+}
+
+.wpcalibrate-btn-primary {
+	background-color: var(--wpcalibrate-primary);
+	color: #ffffff;
+}
+
+.wpcalibrate-btn-primary:hover,
+.wpcalibrate-btn-primary:focus-visible {
+	background-color: var(--wpcalibrate-primary-hover);
+	color: #ffffff;
+}
+
+.wpcalibrate-btn:focus-visible {
+	outline: 2px solid var(--wpcalibrate-primary);
+	outline-offset: 2px;
+}
+
+/* Alerts */
+.wpcalibrate-alert {
+	padding: 12px 16px;
+	border-radius: 6px;
+	margin-bottom: 18px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.wpcalibrate-alert-error {
+	background: #fff1f1;
+	border-inline-start: 4px solid var(--wpcalibrate-error);
+	color: #750e13;
+}
+
+.wpcalibrate-alert-warning {
+	background: #fdf5e6;
+	border-inline-start: 4px solid var(--wpcalibrate-warning);
+	color: #634a00;
+}
+
+/* Results Section */
+.wpcalibrate-result-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 16px;
+	border-bottom: 1px solid var(--wpcalibrate-border);
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.wpcalibrate-order-tag {
+	font-size: 18px;
+	font-weight: 700;
+	margin-inline-end: 10px;
+}
+
+.wpcalibrate-order-date {
+	font-size: 13px;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+/* Status Badges */
+.wpcalibrate-badge {
+	display: inline-block;
+	padding: 4px 10px;
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 12px;
+	line-height: 1.2;
+}
+
+.wpcalibrate-badge-pending {
+	background: #fef8ee;
+	color: #8a5b00;
+	border: 1px solid #f6d198;
+}
+
+.wpcalibrate-badge-ready_for_dispatch,
+.wpcalibrate-badge-shipped,
+.wpcalibrate-badge-in_transit {
+	background: #edf5ff;
+	color: #0043ce;
+	border: 1px solid #bbd6fb;
+}
+
+.wpcalibrate-badge-out_for_delivery {
+	background: #fdf5e6;
+	color: #8c5400;
+	border: 1px solid #f6d198;
+}
+
+.wpcalibrate-badge-delivered {
+	background: #defbe6;
+	color: #0e6027;
+	border: 1px solid #a7f0ba;
+}
+
+.wpcalibrate-badge-delivery_failed,
+.wpcalibrate-badge-cancelled {
+	background: #fff1f1;
+	color: #a2191f;
+	border: 1px solid #ffd7d9;
+}
+
+.wpcalibrate-badge-returned {
+	background: #f6f2ff;
+	color: #6929c4;
+	border: 1px solid #e8daff;
+}
+
+.wpcalibrate-badge-order {
+	background: var(--wpcalibrate-bg-subtle);
+	color: var(--wpcalibrate-text);
+}
+
+/* Parcel Boxes */
+.wpcalibrate-parcel-box {
+	background: #ffffff;
+	border: 1px solid var(--wpcalibrate-border);
+	border-radius: 6px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.wpcalibrate-parcel-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.wpcalibrate-parcel-title h3 {
+	margin: 0 0 4px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.wpcalibrate-parcel-meta {
+	font-size: 13px;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+.wpcalibrate-parcel-status {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.wpcalibrate-courier-btn {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 12px;
+	font-weight: 600;
+	background: var(--wpcalibrate-bg-subtle);
+	color: var(--wpcalibrate-text);
+	border-radius: 4px;
+	text-decoration: none;
+	border: 1px solid var(--wpcalibrate-border);
+	transition: background 0.15s;
+}
+
+.wpcalibrate-courier-btn:hover {
+	background: #e8e8e8;
+	color: var(--wpcalibrate-text);
+}
+
+/* Progress Step Indicator */
+.wpcalibrate-steps-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: 28px 0 24px;
+	padding: 0 10px;
+}
+
+.wpcalibrate-steps-wrapper::before {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: 30px;
+	right: 30px;
+	height: 3px;
+	background: #e0e0e0;
+	z-index: 1;
+}
+
+.wpcalibrate-step {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	flex: 1;
+}
+
+.wpcalibrate-step-circle {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 2px solid #c6c6c6;
+	color: #6f6f6f;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 6px;
+	transition: all 0.2s;
+}
+
+.wpcalibrate-step-label {
+	display: block;
+	font-size: 11px;
+	font-weight: 500;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+.wpcalibrate-step.is-complete .wpcalibrate-step-circle {
+	background: var(--wpcalibrate-primary);
+	border-color: var(--wpcalibrate-primary);
+	color: #ffffff;
+}
+
+.wpcalibrate-step.is-complete .wpcalibrate-step-label {
+	color: var(--wpcalibrate-text);
+	font-weight: 600;
+}
+
+/* Timeline */
+.wpcalibrate-history-section {
+	margin-top: 24px;
+	padding-top: 18px;
+	border-top: 1px solid var(--wpcalibrate-border);
+}
+
+.wpcalibrate-history-title {
+	margin: 0 0 14px;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--wpcalibrate-text);
+}
+
+.wpcalibrate-timeline-flow {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.wpcalibrate-timeline-flow::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	bottom: 6px;
+	left: 6px;
+	width: 2px;
+	background: var(--wpcalibrate-border);
+}
+
+[dir="rtl"] .wpcalibrate-timeline-flow::before {
+	left: auto;
+	right: 6px;
+}
+
+.wpcalibrate-timeline-item {
+	display: flex;
+	gap: 14px;
+	margin-bottom: 16px;
+	position: relative;
+}
+
+.wpcalibrate-timeline-marker {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 3px solid var(--wpcalibrate-primary);
+	flex-shrink: 0;
+	margin-top: 3px;
+	z-index: 2;
+}
+
+.wpcalibrate-timeline-content {
+	flex: 1;
+}
+
+.wpcalibrate-timeline-head {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin-bottom: 2px;
+}
+
+.wpcalibrate-timeline-status {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--wpcalibrate-text);
+}
+
+.wpcalibrate-timeline-date {
+	font-size: 12px;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+.wpcalibrate-timeline-note {
+	margin: 2px 0 0;
+	font-size: 13px;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+/* Empty state */
+.wpcalibrate-no-shipments-notice {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px;
+	background: var(--wpcalibrate-bg-subtle);
+	border-radius: 6px;
+}
+
+.wpcalibrate-info-icon {
+	font-size: 28px;
+	color: var(--wpcalibrate-primary);
+}
+
+.wpcalibrate-no-shipments-notice h3 {
+	margin: 0 0 4px;
+	font-size: 15px;
+}
+
+.wpcalibrate-no-shipments-notice p {
+	margin: 0;
+	font-size: 13px;
+	color: var(--wpcalibrate-text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+	.wpcalibrate-track-card,
+	.wpcalibrate-result-card {
+		padding: 16px;
+	}
+
+	.wpcalibrate-step-label {
+		font-size: 10px;
+	}
+
+	.wpcalibrate-steps-wrapper::before {
+		left: 15px;
+		right: 15px;
+	}
+}

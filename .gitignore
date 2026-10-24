@@ -1,0 +1,10 @@
+# Packaging and OS artifacts
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and environment
+*.log
+.env
